@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} ConstructMarket. Proyecto Final - IronHack Master Program.
+            &copy; {new Date().getFullYear()} ConstructMarket.
           </p>
         </div>
       </div>
