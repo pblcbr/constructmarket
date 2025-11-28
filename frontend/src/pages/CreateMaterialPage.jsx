@@ -93,8 +93,12 @@ const CreateMaterialPage = () => {
       const formDataUpload = new FormData();
       formDataUpload.append('image', file);
 
+      // Use environment variable for API URL, fallback to localhost for development
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5005/api';
+      const uploadUrl = `${apiUrl}/upload`;
+
       const response = await axios.post(
-        'http://localhost:5005/api/upload',
+        uploadUrl,
         formDataUpload,
         {
           headers: {
